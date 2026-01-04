@@ -1,1 +1,12 @@
-doudizhu implementation
+# 斗地主 구현
+
+一个三人同桌的爽快斗地主示例，支持 2 连炸、3 连炸翻倍与火箭倍数。
+
+## 本地运行
+
+```bash
+npm install
+npm run dev
+```
+
+打开 `http://localhost:3000`，输入密钥 `ddz-2025` 加入房间，三个人同时进入即可准备开局。
