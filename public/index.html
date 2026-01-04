@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>爽快斗地主 · 三人同桌</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <h1>爽快斗地主</h1>
+          <p>连炸翻倍 · 三人同桌 · 同时准备开局</p>
+        </div>
+        <div class="status" id="status">连接中...</div>
+      </header>
+
+      <section class="table">
+        <div class="player" id="player-0">
+          <div class="player-info">
+            <span class="name" id="name-0">等待玩家</span>
+            <span class="badge" id="ready-0">未准备</span>
+          </div>
+          <div class="cards" id="cards-0"></div>
+        </div>
+
+        <div class="player" id="player-1">
+          <div class="player-info">
+            <span class="name" id="name-1">等待玩家</span>
+            <span class="badge" id="ready-1">未准备</span>
+          </div>
+          <div class="cards" id="cards-1"></div>
+        </div>
+
+        <div class="player" id="player-2">
+          <div class="player-info">
+            <span class="name" id="name-2">等待玩家</span>
+            <span class="badge" id="ready-2">未准备</span>
+          </div>
+          <div class="cards" id="cards-2"></div>
+        </div>
+
+        <div class="center">
+          <div class="last-play" id="last-play">上一手：暂无</div>
+          <div class="multiplier">倍数：<span id="multiplier">1</span>x</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="profile">
+          <label>
+            房间密钥
+            <input id="room-key" maxlength="16" placeholder="输入密钥进入" />
+          </label>
+          <button class="primary" id="join">加入房间</button>
+          <label>
+            昵称
+            <input id="nickname" maxlength="8" />
+          </label>
+          <button id="rename">更新昵称</button>
+          <button class="primary" id="ready">准备 / 取消</button>
+        </div>
+
+        <div class="hand">
+          <div class="hand-title">
+            <span>你的手牌</span>
+            <span class="turn" id="turn">等待开始</span>
+          </div>
+          <div class="hand-cards" id="hand"></div>
+          <div class="actions">
+            <button class="primary" id="play">出牌</button>
+            <button id="pass">过</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="tips">
+        <p>玩法加强：2连炸、3连炸翻倍更多，火箭直接封顶。只要三人同时准备即可自动开局。</p>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
